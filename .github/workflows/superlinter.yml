@@ -25,8 +25,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ${{secrets.MAIL_USERNAME}}
-          password: ${{secrets.MAIL_PASSWORD}}
+          username: ${{secrets.MS_MAIL_USERNAME}}
+          password: ${{secrets.MS_MAIL_PASSWORD}}
           subject: Github Actions job result
           to: dishainwati@gmail.com, t-dinwati@microsoft.com
           from: Disha Inwati gmail
