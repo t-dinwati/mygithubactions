@@ -21,8 +21,10 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
           subject: Github Actions job result
-          to: dishainwati@gmail.com, disizzher@gmail.com
+          to: dishainwati@gmail.com, t-dinwati@microsoft.com
           from: Luke Skywalker great
           secure: true
           body: Build job of ${{github.repository}} completed successfully!
