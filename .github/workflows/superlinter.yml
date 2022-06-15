@@ -9,7 +9,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      
+      - name: Throw fail
+        run: exit 1
+      
       - name: Run Super-Linter
         uses: github/super-linter@v3.17.0
         env:
@@ -26,7 +29,7 @@ jobs:
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Github Actions job result
           to: dishainwati@gmail.com, t-dinwati@microsoft.com
-          from: Luke Skywalker great
+          from: Disha Inwati gmail
           secure: true
           body: Build job of - ${{github.repository}} failed!
           priority: low
