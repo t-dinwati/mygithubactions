@@ -15,3 +15,15 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          subject: Github Actions job result
+          to: dishainwati@gmail.com, disizzher@gmail.com
+          from: Luke Skywalker great
+          secure: true
+          body: Build job of ${{github.repository}} completed successfully!
+          priority: low
