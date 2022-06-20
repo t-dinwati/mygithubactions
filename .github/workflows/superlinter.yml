@@ -23,7 +23,7 @@ jobs:
         if: failure()
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp-mail.outlook.com
+          server_address: smtp.office365.com
           server_port: 587
           username: ${{secrets.MS_MAIL_USERNAME}}
           password: ${{secrets.MS_MAIL_PASSWORD}}
