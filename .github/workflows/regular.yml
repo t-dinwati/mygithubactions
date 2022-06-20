@@ -12,6 +12,7 @@ on:
     #        │ │      │ │ │
     #        * *      * * *
     - cron: '2 *,*,* * * *'
+  workflow_dispatch:
 jobs:
   test:
     name: echo test
