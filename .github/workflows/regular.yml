@@ -11,7 +11,7 @@ on:
     #        │ │      │ │ │
     #        │ │      │ │ │
     #        * *      * * *
-    - cron: '5 *,*,* * * *'
+    - cron: '2 *,*,* * * *'
 jobs:
   test:
     name: echo test
