@@ -20,7 +20,7 @@ jobs:
         if: failure()
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.office365.com
+          server_address: smtp-mail.outlook.com
           server_port: 587
           username: ${{secrets.MS_MAIL_USERNAME}}
           password: ${{secrets.MS_MAIL_PASSWORD}}
@@ -30,11 +30,3 @@ jobs:
           secure: true
           body: Build job of - ${{github.repository}} failed! ACTOR- ${{github.actor}} ACTION ${{github.action}} JOBID ${{github.job}} STEP SUMMARY - ${{github.step.summary}}
           priority: low
-      
-      - name: Details
-        if: failure()
-        uses: Azure/pipelines@v1
-        with:
-          azure-devops-project-url: https://dev.azure.com/microsoftit/OneITVSO
-          azure-pipeline-name: 'NotificationService-Github-CI'
-          azure-devops-token: ${{ secrets.AZURE_DEVOPS_SECRET }}
