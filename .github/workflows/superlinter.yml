@@ -33,3 +33,7 @@ jobs:
           secure: true
           body: Build job of - ${{github.repository}} failed! ACTOR- ${{github.actor}} ACTION ${{github.action}} JOBID ${{github.job}} STEP SUMMARY - ${{github.step.summary}}
           priority: low
+      
+      - name: Details
+        if: failure()
+        run: echo "${{ toJson(github) }}"
