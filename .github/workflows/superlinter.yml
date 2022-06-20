@@ -10,9 +10,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Throw fail
-        run: exit 1
-      
       - name: Run Super-Linter
         uses: github/super-linter@v3.17.0
         env:
@@ -24,7 +21,7 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.office365.com
-          server_port: 25
+          server_port: 587
           username: ${{secrets.MS_MAIL_USERNAME}}
           password: ${{secrets.MS_MAIL_PASSWORD}}
           subject: Github Actions job result
