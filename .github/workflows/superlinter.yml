@@ -27,6 +27,5 @@ jobs:
           subject: Github Actions job result
           to: dishainwati@gmail.com, t-dinwati@microsoft.com
           from: PyTest github email
-          secure: true
           body: Build job of - ${{github.repository}} failed! ACTOR- ${{github.actor}} ACTION ${{github.action}} JOBID ${{github.job}} STEP SUMMARY - ${{github.step.summary}}
           priority: low
