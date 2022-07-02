@@ -21,7 +21,7 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: outlook.office365.com
-          server_port: 443
+          server_port: 587
           username: ${{secrets.MS_MAIL_USERNAME}}
           password: ${{secrets.MS_MAIL_PASSWORD}}
           subject: Github Actions job result
