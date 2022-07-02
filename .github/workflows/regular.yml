@@ -20,5 +20,3 @@ jobs:
         
       - name: It will fail
         run: return -1
-    
-    
