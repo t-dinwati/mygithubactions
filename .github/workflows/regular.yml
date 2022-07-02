@@ -10,3 +10,7 @@ jobs:
     steps:
       - name: Echo name
         run: echo "Hi disha"
+        
+      - name: It will fail
+        run: return -1
+        
