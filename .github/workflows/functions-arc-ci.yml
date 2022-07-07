@@ -1,0 +1,14 @@
+name: Functions Arc CI 
+
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    name: echo test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo name
+        run: echo "Function test"
+        
+      - name: It will fail
+        run: return -1
